@@ -3,6 +3,9 @@ description:
   Move an issue to a specified column in a GitHub Project. Supports both issue
   events and manual workflow_dispatch triggers.
 author: stulle123
+branding:
+  icon: thumbs-up
+  color: blue
 
 inputs:
   github-token:
