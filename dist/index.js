@@ -31374,7 +31374,6 @@ async function run() {
     const repoName = coreExports.getInput('repo-name') || githubExports.context.repo.repo;
     const repoOwner = coreExports.getInput('repo-owner') || githubExports.context.repo.owner;
 
-
     // Get the GitHub token from the action inputs
     const githubToken = coreExports.getInput('github-token', { required: true });
     if (!githubToken) {

@@ -85,14 +85,14 @@ jobs:
 
 ## Inputs
 
-| Input            | Description                                                                                                                 |
-| ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `github-token`   | Your PAT or GitHub App installation token.                                                                                  |
-| `issue-number`   | The number of the issue to move. The issue already needs to be part of the project.                                         |
+| Input            | Description                                                                                                        |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `github-token`   | Your PAT or GitHub App installation token.                                                                         |
+| `issue-number`   | The number of the issue to move. The issue already needs to be part of the project.                                |
 | `project-number` | The number of the project. You get in from the project URL (e.g., `https://github.com/users/stulle123/projects/2`) |
-| `column-name`    | The project column name to move the issue to (e.g., `Done`).                                                                |
-| `repo-name`      | Optional: The repository name.                                                                                              |
-| `repo-owner`     | Optional: The repository owner.                                                                                             |
+| `column-name`    | The project column name to move the issue to (e.g., `Done`).                                                       |
+| `repo-name`      | Optional: The repository name.                                                                                     |
+| `repo-owner`     | Optional: The repository owner.                                                                                    |
 
 ## Development
 
