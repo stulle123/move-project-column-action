@@ -1,7 +1,6 @@
 name: Move Project Column Action
 description:
-  Move an issue to a specified column in a GitHub Project. Supports both issue
-  events and manual workflow_dispatch triggers.
+  This Action moves an issue to a specified column in a GitHub V2 Project.
 author: stulle123
 branding:
   icon: thumbs-up
