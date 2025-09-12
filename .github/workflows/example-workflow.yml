@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Move to column
         id: move-to-column
-        uses: ./
+        uses: stulle123/move-project-column-action@v1.0.0
         with:
           github-token: ${{ secrets.MY_PAT }}
           issue-number: ${{ github.event.issue.number }}
