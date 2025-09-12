@@ -2,7 +2,6 @@
 
 ![Check dist/](https://github.com/stulle123/move-project-column-action/actions/workflows/check-dist.yml/badge.svg)
 ![Code Coverage](./badges/coverage.svg)
-![CodeQL](https://github.com/stulle123/move-project-column-action/actions/workflows/codeql-analysis.yml/badge.svg)
 ![Continuous Integration](https://github.com/stulle123/move-project-column-action/actions/workflows/ci.yml/badge.svg)
 ![Linter](https://github.com/stulle123/move-project-column-action/actions/workflows/linter.yml/badge.svg)
 
@@ -73,7 +72,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Move issue to project column
-        uses: ./
+        uses: stulle123/move-project-column-action@v1.0.0
         with:
           github-token: ${{ secrets.MY_PAT }}
           issue-number: ${{ inputs.issue-number }}
