@@ -1,0 +1,23 @@
+name: Example Workflow (on issue opened)
+
+on:
+  issues:
+    types:
+      - opened
+
+permissions: read-all
+
+jobs:
+  move-project-column:
+    name: Test Move Project Column Action
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move to column
+        id: move-to-column
+        uses: ./
+        with:
+          github-token: ${{ secrets.MY_PAT }}
+          issue-number: ${{ github.event.issue.number }}
+          project-number: 3
+          column-name: Done

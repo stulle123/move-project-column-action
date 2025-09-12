@@ -1,0 +1,29 @@
+name: Move Project Column Action
+description:
+  Move an issue to a specified column in a GitHub Project. Supports both issue
+  events and manual workflow_dispatch triggers.
+author: stulle123
+
+inputs:
+  github-token:
+    description: GitHub token
+    required: true
+  issue-number:
+    description: Issue number
+    required: true
+  project-number:
+    description: Project number
+    required: true
+  column-name:
+    description: Column name
+    required: true
+  repo-name:
+    description: Repository name
+    required: false
+  repo-owner:
+    description: Repository owner
+    required: false
+
+runs:
+  using: node24
+  main: dist/index.js

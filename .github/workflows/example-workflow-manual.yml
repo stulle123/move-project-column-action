@@ -1,0 +1,42 @@
+name: Example Workflow (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      issue-number:
+        description: The number of the issue you want to move around.
+        required: true
+        type: number
+      project-number:
+        description: The Project number which you can find in the project's URL.
+        required: true
+        type: number
+      column-name:
+        description: The project column name to move the issue to (e.g., Done).
+        required: true
+        type: string
+      repo-name:
+        description: Repository name (optional, defaults to current repo name).
+        required: false
+        type: string
+      repo-owner:
+        description:
+          Repository owner (optional, defaults to current repo owner).
+        required: false
+        type: string
+
+permissions: read-all
+
+jobs:
+  move-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Move issue to project column
+        uses: ./
+        with:
+          github-token: ${{ secrets.MY_PAT }}
+          issue-number: ${{ inputs.issue-number }}
+          project-number: ${{ inputs.project-number }}
+          column-name: ${{ inputs.column-name }}
+          repo-name: ${{ inputs.repo-name }}
+          repo-owner: ${{ inputs.repo-owner }}
