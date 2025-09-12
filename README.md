@@ -69,7 +69,7 @@ permissions: read-all
 
 jobs:
   move-issue:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Move issue to project column
         uses: stulle123/move-project-column-action@v1.0.0
